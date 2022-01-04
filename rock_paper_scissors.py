@@ -8,7 +8,7 @@ def play_game():
     comp_roll = 0
     playing = False
     while int(best_of) not in [1, 3, 5]:
-        best_of = input("Lets play Rock, Paper, Scissors, best out of 1, 3 or 5? ")
+        best_of = input("Lets play Rock, Paper, Scissors, best to  1, 3 or 5? ")
     print("You have chosen best of", best_of, ",Lets Play!")
     while playing is False:
         user_select = 0
