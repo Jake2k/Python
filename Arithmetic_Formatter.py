@@ -20,13 +20,32 @@ def arithmetic_arranger(lista,answers):
                 raise Exception("Operator must be + or -")
         answer = op_func(int(listb[0]),int(listb[2]))
         answer_list.append(answer)
-        
-    print ("{:>8}{:>8}{:>8}{:>8}".format(*top_number))
-    print ("{:>8}{:>8}{:>8}{:>8}".format(*bottom_number))
-    print ("{:>8}{:>8}{:>8}{:>8}".format(*lines))
-    if answers == True:
-        print ("{:>8}{:>8}{:>8}{:>8}".format(*answer_list))
-    
+    if len(top_number) == 1:
+        print ("{:>8}".format(*top_number))
+        print ("{:>8}".format(*bottom_number))
+        print ("{:>8}".format(*lines))
+        if answers == True:
+            print ("{:>8}".format(*answer_list))
+    if len(top_number) == 2:
+        print ("{:>8}{:>8}".format(*top_number))
+        print ("{:>8}{:>8}".format(*bottom_number))
+        print ("{:>8}{:>8}".format(*lines))
+        if answers == True:
+            print ("{:>8}{:>8}".format(*answer_list))
+    if len(top_number) == 3:
+        print ("{:>8}{:>8}{:>8}".format(*top_number))
+        print ("{:>8}{:>8}{:>8}".format(*bottom_number))
+        print ("{:>8}{:>8}{:>8}".format(*lines))
+        if answers == True:
+            print ("{:>8}{:>8}{:>8}".format(*answer_list))
+    if len(top_number) == 4:
+        print ("{:>8}{:>8}{:>8}{:>8}".format(*top_number))
+        print ("{:>8}{:>8}{:>8}{:>8}".format(*bottom_number))
+        print ("{:>8}{:>8}{:>8}{:>8}".format(*lines))
+        if answers == True:
+            print ("{:>8}{:>8}{:>8}{:>8}".format(*answer_list))
+
+            
 def set_symbol(symbol):
     op_func = ops[symbol]
     return op_func        
@@ -53,4 +72,4 @@ ops = {
     "-": operator.sub
 }
 
-arithmetic_arranger(["32 + 698", "3801 + 2", "45 - 43", "123 - 49"],False)
+arithmetic_arranger(['3801 - 2', '123 + 49'],False)
